@@ -12,6 +12,8 @@ const button = document.querySelector("#transition")
 const text = document.querySelector("#changing")
 const changeA = document.querySelector("#change-A")
 const changeB = document.querySelector("#change-B")
+const err = document.querySelector("#error")
+
 const delay = 1000;
 
 button.addEventListener("click",()=>{
@@ -29,8 +31,10 @@ button.addEventListener("click",()=>{
   } else {
     console.log("please select something!")
     document.querySelector("body").classList.add("error")
+    error.innerText = "ERROR"
     setTimeout(()=>{
       document.querySelector("body").classList.remove("error")
+      error.innerText = ""
     },700)
   }
 })
